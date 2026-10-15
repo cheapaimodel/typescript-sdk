@@ -1,12 +1,12 @@
 import OpenAI, { type ClientOptions } from "openai";
 
-export const DEFAULT_BASE_URL = "https://api.cheapaimodel.com/v1";
+export const DEFAULT_BASE_URL = "https://api.cheapaimodel.ai/v1";
 export const VERSION = "0.1.0";
 
 export interface CheapAIModelOptions extends Omit<ClientOptions, "apiKey" | "baseURL"> {
   /** Defaults to process.env.CHEAPAIMODEL_API_KEY */
   apiKey?: string;
-  /** Defaults to process.env.CHEAPAIMODEL_BASE_URL or https://api.cheapaimodel.com/v1 */
+  /** Defaults to process.env.CHEAPAIMODEL_BASE_URL or https://api.cheapaimodel.ai/v1 */
   baseURL?: string;
 }
 
@@ -31,7 +31,7 @@ export class CheapAIModel extends OpenAI {
   }
 
   /** Shortcut: send one user message and return the reply text. */
-  async chatText(prompt: string, model = "gpt-4o-mini"): Promise<string> {
+  async chatText(prompt: string, model = "glm-5.3-flash"): Promise<string> {
     const res = await this.chat.completions.create({
       model,
       messages: [{ role: "user", content: prompt }],

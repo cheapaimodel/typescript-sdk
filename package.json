@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/cheapaimodel/typescript-sdk"
   },
-  "homepage": "https://cheapaimodel.com",
+  "homepage": "https://cheapaimodel.ai",
   "license": "MIT",
   "dependencies": {
     "openai": "^4.60.0"

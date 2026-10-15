@@ -1,6 +1,6 @@
 # CheapAIModel TypeScript SDK
 
-Lightweight TypeScript / JavaScript client for the [CheapAIModel](https://cheapaimodel.com) API.
+Lightweight TypeScript / JavaScript client for the [CheapAIModel](https://cheapaimodel.ai) API.
 
 CheapAIModel is OpenAI-compatible, so this SDK extends the official `openai` package — every method you know from OpenAI works the same way.
 
@@ -18,7 +18,7 @@ import { CheapAIModel } from "@cheapaimodel/sdk";
 const client = new CheapAIModel(); // reads CHEAPAIMODEL_API_KEY
 
 const res = await client.chat.completions.create({
-  model: "gpt-4o-mini",
+  model: "glm-5.3-flash",
   messages: [{ role: "user", content: "Hello!" }],
 });
 console.log(res.choices[0].message.content);
@@ -31,7 +31,7 @@ console.log(await client.chatText("Give me a fun fact about Vietnam."));
 
 ```ts
 const stream = await client.chat.completions.create({
-  model: "gpt-4o-mini",
+  model: "glm-5.3-flash",
   messages: [{ role: "user", content: "Tell me a joke" }],
   stream: true,
 });
@@ -46,7 +46,7 @@ for await (const chunk of stream) {
 | Option | Env variable | Default |
 | --- | --- | --- |
 | `apiKey` | `CHEAPAIMODEL_API_KEY` | — (required) |
-| `baseURL` | `CHEAPAIMODEL_BASE_URL` | `https://api.cheapaimodel.com/v1` |
+| `baseURL` | `CHEAPAIMODEL_BASE_URL` | `https://api.cheapaimodel.ai/v1` |
 
 Any other OpenAI client option (`timeout`, `maxRetries`, ...) is passed straight through.
 
