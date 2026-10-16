@@ -1,6 +1,6 @@
 # CheapAIModel TypeScript SDK
 
-Lightweight TypeScript / JavaScript client for the [CheapAIModel](https://cheapaimodel.ai) API.
+Lightweight TypeScript / JavaScript client for the [CheapAIModel](https://cheapaimodel.ai?utm_source=github&utm_medium=typescript-sdk) API.
 
 CheapAIModel is OpenAI-compatible, so this SDK extends the official `openai` package — every method you know from OpenAI works the same way.
 
